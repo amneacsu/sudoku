@@ -1,0 +1,189 @@
+body {
+	background-color: #E6D7C8;
+	font-family: Arial, Tahoma, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.button {
+	display: inline-block;
+	background-color: #827364;
+	padding: 10px 14px 8px;
+	font-size: 1em;
+	cursor: pointer;
+	color: #FFF;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	text-decoration: none !important;
+}
+
+a.button:hover {
+	background-color: #665748;
+}
+
+input[type="text"] {
+	color: #665748;
+	border: 1px solid;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding: 6px;
+	font-size: 1em;
+}
+
+#menu {
+	display: none;
+}
+
+#menu a {
+	display: block;
+	text-align: center;
+	margin-top: 6px;
+}
+
+#menu a:first-child {
+	margin-top: 0;
+}
+
+#menu a[rel~="resumegame"] {
+	display: none;
+}
+
+.bubble {
+	background-color: #FFF;
+	padding: 24px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.bubble h1, .bubble h2, .bubble h3 {
+	margin: 0 0 8px 0;
+}
+
+.bubble h1 {
+	font-size: 1.5em;
+}
+
+.bubble h2 {
+	font-size: 1em;
+}
+
+.bubble h3 {
+	font-size: 1em;
+}
+
+
+#game {
+	position: relative;
+	border: #000 4px solid;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#time {
+	float: left;
+	font-size: 1.25em;
+	margin: 5px 0 0 0;
+}
+
+#grid {
+	width: 301px;
+	border-color: #000;
+	border-style: solid;
+	border-width: 1px 0 0 1px;
+	overflow: hidden;
+}
+
+#grid div {
+	color: blue;
+	border-color: #000;
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	font-weight: bold;
+	float: left;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 1.25em;
+	cursor: pointer;
+}
+
+#grid div.given {
+	cursor: default;
+	color: #000;
+	text-decoration: none !important;
+}
+
+/* * /
+#grid div.given.conflict {
+	color: orange;
+}
+
+#grid div.conflict {
+	color: red;
+}
+/* */
+
+#grid div.selected {
+	-webkit-box-shadow: 0 0 12px 1px #665748;
+}
+
+#grid div.over {
+	background-image: url('../images/over.gif');
+}
+
+
+.scorelist {
+	margin: 10px 0 20px 0;
+}
+
+.scorelist div {
+	padding: 6px 0 6px 0;
+	overflow: hidden;
+}
+
+.scorelist b {
+	float: left;
+}
+
+.scorelist u, .scorelist b, .scorelist i {
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1em;
+}
+
+.scorelist u {
+	float: left;
+	width: 16px;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.scorelist i {
+	float: right;
+}
+
+a[rel~="scores"] {
+	position: absolute;
+	text-decoration: none;
+}
+
+#scores a[rel~="next"] {
+	right: 0;
+}
+
+#scores a[rel~="prev"] {
+	left: 0;
+}

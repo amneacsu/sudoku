@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery.sudoku();</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+	<div id="debug"></div>
+
+	<div id="menu" class="bubble">
+		<h1><center>jQuery.sudoku();</center></h1><br/>
+		<a class="button" rel="resumegame">Resume game</a>
+		<a class="button" rel="newgame">New game</a>
+		<a class="button" rel="highscores">High scores</a>
+		<a class="button" rel="about">About</a>
+	</div>
+
+	<div class="bubble">
+		<div id="game"><div id="grid"></div></div>
+		<div style="overflow: hidden; margin-top: 15px;">
+			<div id="time">00:00</div>
+			<a class="button mainmenu" style="float: right;">Pause</a>
+		</div>
+	</div>
+
+	<div class="bubble" id="scores">
+		<h1>Top scores</h1>
+		<div class="scorelist"></div>
+		<div style="position: relative; height: 15px;">
+			<a rel="scores prev">prev</a><a rel="scores next">next</a>
+		</div>
+		<br/>
+		<center><a class="button mainmenu">Menu</a></center>
+	</div>
+
+	<div class="bubble" id="about">
+		<div>
+			<h1>How to play</h1>
+			Mouse over the cells to select them, or use your cursor keys to navigate the grid, then press a number key on your keyboard. To clear a cell, press the spacebar or type in the number zero.
+			<br/><br/>
+
+			<h1>Code credits</h1>
+			<a href="http://www.jquery.com">jQuery 1.3.2</a><br/>
+			<a href="http://plugins.jquery.com/project/cookie">jQuery.cookie</a>
+		</div>
+
+		<br/>
+
+		<center><a class="button mainmenu">Menu</a></center>
+	</div>
+
+	<div class="bubble" id="submitscore">
+	<center>
+		<h1>Congratulations!</h1><h2>Enter your name</h2>
+		<input type="text" id="playername"/><br/><br/>
+		<a class="button" id="submitscore">Submit score</a>
+	</center>
+	</div>
+
+<script type="text/javascript">
+	if (window.location.host != 'dev') {
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+</script>
+<script type="text/javascript">
+	if (window.location.host != 'dev') {
+		try {
+			var pageTracker = _gat._getTracker("UA-11676608-1");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	}
+</script>
+
+</body>
+</html>
